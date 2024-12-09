@@ -1,6 +1,7 @@
+```bash
 sudo nano /etc/systemd/system/internet-checker.service
-
-
+```
+```bash
 [Unit]
 Description=Servizio di controllo connessione internet
 
@@ -15,13 +16,11 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+```
 
-
-
+```bash
 sudo systemctl daemon-reload
-
 sudo systemctl enable internet-checker.service
-
 sudo systemctl start internet-checker.service
-
 sudo systemctl status internet-checker.service
+```
