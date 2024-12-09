@@ -19,6 +19,9 @@ WantedBy=multi-user.target
 
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable internet-checker.service
+
 sudo systemctl start internet-checker.service
+
 sudo systemctl status internet-checker.service
