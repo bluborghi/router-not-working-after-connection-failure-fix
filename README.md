@@ -1,3 +1,6 @@
+nel venv installa: `pip3 install selenium python-dotenv`
+
+
 ```
 sudo nano /etc/systemd/system/internet-checker.service
 ```
@@ -6,11 +9,11 @@ sudo nano /etc/systemd/system/internet-checker.service
 Description=Servizio di controllo connessione internet
 
 [Service]
-ExecStart=/usr/bin/python3 /home/blubo/internet_checker/connection-check.py
+ExecStart=/home/blubo/internet_checker/python-venv/bin/python /home/blubo/internet_checker/connection-check.py
 Restart=always
 User=blubo
 WorkingDirectory=/home/blubo/internet_checker
-Environment=PATH=/usr/bin:/usr/local/bin
+Environment=PATH=/home/blubo/internet_checker/python-venv/bin:/usr/bin:/usr/local/bin
 Environment=PYTHONUNBUFFERED=1
 RestartSec=10
 
